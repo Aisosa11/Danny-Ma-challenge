@@ -1,0 +1,9 @@
+###  1. What is the total amount each customer spent at the restaurant?
+
+SELECT Customer_id,SUM (price)
+FROM dannys_diner.menu
+Join dannys_diner.sales ON menu.product_id = sales.product_id
+GROUP BY Customer_id
+ORDER BY Customer_id ASC;
+
+
